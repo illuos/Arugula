@@ -1,1 +1,1 @@
-worker: npm rebuild node-sass & node --harmony index.js
+worker: node --harmony index.js
