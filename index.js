@@ -1,4 +1,5 @@
 // * Imports
+require('dotenv').config(); 
 const commando = require("discord.js-commando");
 const config = require("./config.json");
 
