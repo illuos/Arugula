@@ -42,7 +42,7 @@ client.registry
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
-    .registerCommandsIn(`${__dirname}/commands`);
+    .registerCommandsIn(`./commands`); // Testing without the __dirname call
 
 // * Magic!
 client.login();
