@@ -12,7 +12,7 @@ const client = new commando.Client({
 // * Core Event Handling
 client.on("ready", () => { // Startup
     console.log(`Arugula is online on ${client.guilds.size} guilds.`);
-    client.user.setActivity("the plants grow | aru", {
+    client.user.setActivity("the plants grow | aru!", {
         type: "WATCHING"
     });
 });
