@@ -1,7 +1,6 @@
 // * Imports
 require('dotenv').config(); // OWNER, PREFIX, CLIENT_TOKEN
 const commando = require("discord.js-commando");
-const config = require("./config.json");
 
 // * Client Initialization
 const client = new commando.Client({
