@@ -1,12 +1,25 @@
 {
-  "name": "Arugula",
+  "name": "arugula",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/illuos/Arugula.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illuos/Arugula.git"
+  },
   "author": "Vins Sharma <vms5391@psu.edu>",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^11.5.1",
     "discord.js-commando": "^0.10.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony ."
+  },
+  "bugs": {
+    "url": "https://github.com/illuos/Arugula/issues"
+  },
+  "homepage": "https://github.com/illuos/Arugula#readme",
+  "devDependencies": {},
+  "description": ""
 }
