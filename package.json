@@ -11,6 +11,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "discord.js-commando": "^0.10.0",
+    "dotenv": "^8.1.0",
     "heroku": "^7.29.0"
   },
   "scripts": {
@@ -19,6 +20,10 @@
   },
   "bugs": {
     "url": "https://github.com/illuos/Arugula/issues"
+  },
+  "engines": {
+    "node": "10.16.0",
+    "npm": "*"
   },
   "homepage": "https://github.com/illuos/Arugula#readme",
   "devDependencies": {},
