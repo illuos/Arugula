@@ -1,12 +1,12 @@
 // * Imports
-require('dotenv').config(); 
+require('dotenv').config(); // OWNER, PREFIX, CLIENT_TOKEN
 const commando = require("discord.js-commando");
 const config = require("./config.json");
 
 // * Client Initialization
 const client = new commando.Client({
-    owner: config.owner,
-    commandPrefix: config.prefix
+    owner: process.env.OWNER,
+    commandPrefix: process.env.PREFIX
 });
 
 // * Core Event Handling
@@ -46,4 +46,4 @@ client.registry
     .registerCommandsIn(`${__dirname}/commands`);
 
 // * Magic!
-client.login(config.token);
+client.login();
