@@ -1,5 +1,5 @@
 // * Imports
-require('dotenv').config(); // OWNER, PREFIX, CLIENT_TOKEN
+require('dotenv').config();
 const commando = require("discord.js-commando");
 
 // * Client Initialization
