@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --harmony index.js"
+    "start": "node index.js"
   },
   "bugs": {
     "url": "https://github.com/illuos/Arugula/issues"
