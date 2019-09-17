@@ -1,7 +1,7 @@
 // * Imports
 require('dotenv').config();
 const commando = require("discord.js-commando");
-const path = require("path")
+const path = require("path");
 
 // * Client Initialization
 const client = new commando.Client({
@@ -43,7 +43,7 @@ client.registry
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
-    .registerCommandsIn(path.join(__dirname, "commands")); // Testing without the __dirname call
+    .registerCommandsIn(path.join(__dirname, "commands"));
 
 // * Magic!
 client.login();
