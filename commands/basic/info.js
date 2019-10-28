@@ -23,7 +23,7 @@ class info extends commando.Command {
         let embed = new RichEmbed()
             .setAuthor(args.user.username, args.user.displayAvatarURL)
             .setURL(args.user.displayAvatarURL)
-            .setColor(message.guild.member(args.user).highestRole.color)
+            .setColor(message.guild.member(args.user).displayHexColor)
             .setImage(args.user.displayAvatarURL)
             .setDescription(`[Direct Avatar Link!](${args.user.displayAvatarURL})`)
             .addField("User ID", args.user.id, true)

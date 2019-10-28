@@ -23,7 +23,7 @@ class setrolecolor extends commando.Command {
         var hexCode = args.color;
         if (hexCode.startsWith("#")) hexCode = hexCode.substr(1); // Cuts off leading # mark
 
-        message.member.highestRole.setColor(args.color)
+        message.member.colorRole.setColor(args.color)
             .catch(console.error);
         let embed = new RichEmbed()
             .setTitle("Finished changing color.")
