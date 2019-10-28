@@ -1,5 +1,5 @@
 const commando = require('discord.js-commando');
-const eightBallResponse = require('8ball.js')(); // () handles random response
+const eightBallResponse = require('8ball.js'); // () handles random response
 
 class eightball extends commando.Command {
     constructor(client) {
@@ -21,7 +21,7 @@ class eightball extends commando.Command {
     }
     async run(message, args) {
         // TODO: Personalize Arugula's responses, add more responses, or clean up responses
-        message.channel.send(eightBallResponse);
+        message.channel.send(`*${eightBallResponse()}*`);
     }
 }
 
