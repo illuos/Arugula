@@ -29,7 +29,7 @@ class info extends commando.Command {
             .addField("User ID", args.user.id, true)
             .addField("Discriminator Tag", args.user.tag, true)
             .addField("Status", args.user.presence.status.toUpperCase(), true)
-            .setThumbnail("https://vignette.wikia.nocookie.net/central/images/6/60/Discord-logo.png/revision/latest?cb=20170621125902")
+            .setThumbnail("https://cdn.discordapp.com/avatars/618549037301366799/d362afd8821247e0ef8b3564edb515ac.png?size=2048") // TODO: Refactor this link into a direct link to the bot avatar
             .setTimestamp(args.user.createdAt)
             .setFooter("Account created on");
 
