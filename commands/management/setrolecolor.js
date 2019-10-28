@@ -20,6 +20,7 @@ class setrolecolor extends commando.Command {
         });
     }
     async run(message, args) {
+        // TODO: Add functionality for color changes by a manager/owner
         var hexCode = args.color;
         if (hexCode.startsWith("#")) hexCode = hexCode.substr(1); // Cuts off leading # mark
 
