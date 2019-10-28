@@ -6,7 +6,8 @@ const path = require("path");
 // * Client Initialization
 const client = new commando.Client({
     owner: process.env.OWNER,
-    commandPrefix: process.env.PREFIX
+    commandPrefix: process.env.PREFIX,
+    nonCommandEditable: true
 });
 
 // * Core Event Handling
