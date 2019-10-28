@@ -41,12 +41,13 @@ client.registry
     .registerDefaultTypes()
     .registerGroups([
         ["basic", "Basic commands"],
-        ["owner", "Owner-only commands"],
-        ["music", "Music-related commands"]
+        ["management", "Server management commands"],
+        ["music", "Music-related commands"],
+        ["owner", "Owner-only commands"]
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
-    .registerCommandsIn(path.join(__dirname, "commands")); // Testing without the __dirname call
+    .registerCommandsIn(path.join(__dirname, "commands"));
 
 // * Magic!
 client.login(config.token);

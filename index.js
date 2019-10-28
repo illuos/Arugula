@@ -40,8 +40,9 @@ client.registry
     .registerDefaultTypes()
     .registerGroups([
         ["basic", "Basic commands"],
-        ["owner", "Owner-only commands"],
-        ["music", "Music-related commands"]
+        ["management", "Server management commands"],
+        ["music", "Music-related commands"],
+        ["owner", "Owner-only commands"]
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
