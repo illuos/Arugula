@@ -1,4 +1,5 @@
 // * Test-bed separate bot using the same command files
+// node --harmony cardamom.js
 
 // * Imports
 const commando = require("discord.js-commando");

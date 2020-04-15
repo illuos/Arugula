@@ -1,5 +1,4 @@
 const commando = require("discord.js-commando");
-const { getStatus } = require("mc-server-status");
 
 class pingmc extends commando.Command {
     constructor(client) {
@@ -21,11 +20,10 @@ class pingmc extends commando.Command {
     }
     async run(message, args) {
         message.react('✅');
-        
-        let status = await getStatus(args.server);
 
-        message.channel.send(`\`\`\`${status}\n\`\`\``);
+        
     }
 }
+
 
 module.exports = pingmc;
