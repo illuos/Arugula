@@ -15,11 +15,14 @@ class info extends commando.Command {
             args: [{
                 key: "user",
                 prompt: "Which person would you like to pull information of?",
-                type: "user"
+                type: "user",
+                default: "arugula"
             }]
         });
     }
     async run(message, args) {
+        message.react('✅');
+
         let embed = new RichEmbed()
             .setAuthor(args.user.username, args.user.displayAvatarURL)
             .setURL(args.user.displayAvatarURL)

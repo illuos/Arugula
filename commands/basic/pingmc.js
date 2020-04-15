@@ -20,9 +20,9 @@ class pingmc extends commando.Command {
         });
     }
     async run(message, args) {
-        let status = await getStatus(args.server);
-
         message.react('✅');
+        
+        let status = await getStatus(args.server);
 
         message.channel.send(`\`\`\`${status}\n\`\`\``);
     }
