@@ -1,4 +1,6 @@
 const commando = require("discord.js-commando");
+const { RichEmbed } = require("discord.js");
+const pingServer = require("minecraft-server-util");
 
 class pingmc extends commando.Command {
     constructor(client) {
@@ -14,14 +16,38 @@ class pingmc extends commando.Command {
                 key: "server",
                 prompt: "What server would you like to ping?",
                 type: "string",
-                default: "andyusesrange.duckdns.org:25565"
+                default: "andyusesrange.duckdns.org"
             }]
         });
     }
     async run(message, args) {
-        message.react('✅');
 
-        
+        // Callback ping
+        pingServer(args.server, 25565, (error, response) => {
+            if (error) {
+                message.react('❌')
+                message.channel.send(`\`\`\`${error}\n\`\`\`\nI was unable to connect to the server. Please contact my owner for more information.`);
+            } else {
+                message.react('✅');
+
+                let playerList = "";
+                for (var player in response.samplePlayers) {
+                    playerList += response.samplePlayers[player].name + "\n";
+                }
+
+                let embed = new RichEmbed()
+                    .setAuthor(response.host, "https://cdn.discordapp.com/attachments/385581009653202945/700031903994216468/minecraft-server-icon-64x64-54.png")
+                    .setDescription(response.descriptionText)
+                    .setColor(message.guild.member(this.client.user).displayHexColor)
+                    .addField("Port", response.port, true)
+                    .addField("Version", response.version, true)
+                    .addField("Players", `${response.onlinePlayers}/${response.maxPlayers}`, true)
+                    .addField("Players currently online:", playerList)
+                    .setTimestamp(Date.now());
+                
+                    message.channel.send({embed});
+            }
+        });
     }
 }
 
