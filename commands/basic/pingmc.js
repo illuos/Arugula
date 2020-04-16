@@ -34,7 +34,7 @@ class pingmc extends commando.Command {
                 for (var player in response.samplePlayers) {
                     playerList += response.samplePlayers[player].name + "\n";
                 }
-                if (playerList.equals("")) {
+                if (playerList === "") {
                     playerList = "\*No players currently online\*";
                 }
 
