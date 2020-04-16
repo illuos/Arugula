@@ -34,6 +34,9 @@ class pingmc extends commando.Command {
                 for (var player in response.samplePlayers) {
                     playerList += response.samplePlayers[player].name + "\n";
                 }
+                if (playerList.equals("")) {
+                    playerList = "\*No players currently online\*";
+                }
 
                 let embed = new RichEmbed()
                     .setAuthor(response.host, "https://cdn.discordapp.com/attachments/385581009653202945/700031903994216468/minecraft-server-icon-64x64-54.png")
