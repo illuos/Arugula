@@ -10,12 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "8ball.js": "^1.1.0",
-    "discord.js": "^11.5.1",
+    "discord.js": "^11.6.4",
     "discord.js-commando": "^0.10.0",
     "dotenv": "^8.1.0",
     "heroku": "^7.29.0",
     "minecraft-server-util": "^1.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "node-spotify-api": "^1.1.1"
   },
   "scripts": {
